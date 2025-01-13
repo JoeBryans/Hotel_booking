@@ -18,6 +18,7 @@ model User {
   name          String?
   username      String?
   password      String?
+  phone         String?
   email         String?   @unique
   emailVerified DateTime?
   image         String?
@@ -26,6 +27,7 @@ model User {
   reviews       Review[]
   bookings      Booking[]
   payments      Payment[]
+  hotel         Hotel[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 }
@@ -76,11 +78,18 @@ model VerificationToken {
 
 model Hotel {
   id       String   @id @default(cuid())
-  name     String
-  location String
-  rating   Int
+  name     String?
+  location String?
+  rating   Int?
+  userId   String
+  city     String
+  country  String
+  state    String
+  image    String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   reviews  Review[]
   rooms    Room[]
+  // roomAmenities String[]
 }
 
 model Review {
@@ -88,7 +97,7 @@ model Review {
   hotelId     String
   reviewerId  String
   userId      String
-  //  user user @relation(fields: [userId], references: [id])
+  // user        User @relation(fields: [userId], references: [id])
   reviewer    User     @relation(fields: [reviewerId], references: [id], onDelete: Cascade)
   hotel       Hotel    @relation(fields: [hotelId], references: [id], onDelete: Cascade)
   rating      Int

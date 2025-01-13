@@ -1,10 +1,10 @@
 import Hero from "@/components/Header/Header/Hero";
 import Search from "@/components/Header/Header/Search";
-import Cities from "@/components/Header/Header/home/cities";
-import Discover from "@/components/Header/Header/home/discover";
-import GuestHouse from "@/components/Header/Header/home/guest_house";
-import PropertyType from "@/components/Header/Header/home/property_type";
-import UniqueStay from "@/components/Header/Header/home/unique_stay";
+import Cities from "@/components/home/cities";
+import Discover from "@/components/home/discover";
+import GuestHouse from "@/components/home/guest_house";
+import PropertyType from "@/components/home/property_type";
+import UniqueStay from "@/components/home/unique_stay";
 import Image from "next/image";
 
 export default function Home() {

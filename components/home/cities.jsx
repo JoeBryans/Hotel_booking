@@ -1,9 +1,9 @@
 import React from "react";
-import lagos from "../../../../assets/lagos.jpg";
-import Abuja from "../../../../assets/Abuja.jpg";
-import kano from "../../../../assets/city1.jpg";
-import ibadan from "../../../../assets/city.jpg";
-import ph from "../../../../assets/city2.jpg";
+import lagos from "../../assets/lagos.jpg";
+import Abuja from "../../assets/Abuja.jpg";
+import kano from "../../assets/city1.jpg";
+import ibadan from "../../assets/city.jpg";
+import ph from "../../assets/city2.jpg";
 import Image from "next/image";
 const Cities = () => {
   const City = [

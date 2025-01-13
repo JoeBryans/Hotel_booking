@@ -1,15 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import axios from "axios";
 import Link from "next/link";
+import { GetUser } from "./get_user";
 const Navbar = () => {
-  const [openNav, setOpenNav] = useState(false);
-  const Bar = () => {
-    setOpenNav(!openNav);
-    console.log(openNav);
-  };
   const user = true;
   return (
     <div className="bg-blue-600 border-b-1 border-slate-700 lg:px-52 md:px-14 px-10">
@@ -53,6 +47,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="">Trips</Link>
+            </li>
+            <li>
+              <GetUser />
             </li>
             <li>
               <Link href="">sign in</Link>
